@@ -143,5 +143,29 @@ p, h2, p1, p2, p3 {
 }
 
 }
+
+@media screen and (max-width: 420px) {
+
+	.lossimage {
+
+	width: 20%;
+    height: 222px;
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    left: 80%;
+    
+	}
+
+	p, h2, p1, p2, p3 {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 9px;
+    line-height: 26px;
+
+}
+
+}
     
 
