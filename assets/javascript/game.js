@@ -13,7 +13,12 @@ console.log(NumberToGuess);
 
 $("#guessnumber").text("Number to be guessed: " + NumberToGuess);
 
-var imagepoints = [23, 40, 49];
+var imagepoints = [23, 20, 57];
+
+function reset () {
+	counter=0;
+	NumberToGuess;
+}
 
 for (var i = 0; i < imagepoints.length; i++){
 
@@ -40,6 +45,8 @@ counter += mineralvalue;
 
 console.log(counter);
 
+$("#score").text("Score so far: " + counter)
+
 if (counter == NumberToGuess) {
 	alert("You won!");
 	wins++;
@@ -49,8 +56,10 @@ if (counter == NumberToGuess) {
 else if (counter > NumberToGuess) {
 	alert("You lose!");
 	losses++;
-	$("#loss").text("Losses: " + losses)
+	$("#losses").text("Losses: " + losses)
+
 }
+
 
 
 
