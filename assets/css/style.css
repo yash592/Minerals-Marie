@@ -1,0 +1,41 @@
+body {
+	background: url("https://cdn.suwalls.com/wallpapers/vector/lego-breaking-bad-29291-1920x1080.jpg");
+	background-size: cover;
+	
+}
+
+h1 {
+	font-family: 'Bangers', cursive;
+	color: white;
+	text-align: center;
+	font-size: 114px;
+}
+
+p, h2, p1, p2 {
+	color: white;
+	font-family: 'Press Start 2P', cursive;
+	text-align: center;
+	font-size: 24px;
+}
+
+.results {
+	width: 100%;
+	text-align: center;
+	
+}
+
+.mineral-image {
+      width: 250px;
+      height: 250px;
+    }
+
+    #minerals {
+
+    width: 40%;
+    align-content: right;
+    position: absolute;
+    bottom: 0px;
+    right: 28%;
+}
+    
+
