@@ -7,18 +7,22 @@ counter = 0;
 wins=0;
 losses=0;
 
-var NumberToGuess = Math.floor((Math.random() * 100) + 1);
+function Guessnumber() {
+	NumberToGuess = Math.floor((Math.random() * 100) + 1);
+}
 
-console.log(NumberToGuess);
+console.log(Guessnumber());
 
 $("#guessnumber").text("Number to be guessed: " + NumberToGuess);
 
-var imagepoints = [23, 20, 57];
+
 
 function reset () {
 	counter=0;
-	NumberToGuess;
-}
+	Guessnumber();
+};
+
+var imagepoints = [23, 20, 57];
 
 for (var i = 0; i < imagepoints.length; i++){
 
@@ -26,7 +30,7 @@ var mineral = $("<img>");
 
 mineral.addClass("mineral-image");
 
-mineral.attr("src", "http://www.hallegeologicalservices.ca/wp-content/uploads/2014/01/goethite.png", "https://www.engineering.com/Portals/0/BlogFiles/3D%20Printing/0114/3_ores.png");
+mineral.attr("src", "http://www.hallegeologicalservices.ca/wp-content/uploads/2014/01/goethite.png");
 
 mineral.attr("mineral-points", imagepoints[i]);
 
@@ -34,7 +38,8 @@ $("#minerals").append(mineral)
 
 }
 
-$(".mineral-image").on("click", function(){
+$(".mineral-image").on("click", function() {
+
 
 
 
@@ -48,17 +53,20 @@ console.log(counter);
 $("#score").text("Score so far: " + counter)
 
 if (counter == NumberToGuess) {
-	alert("You won!");
 	wins++;
+	$(".winimagea").css("display", "block");
 	$("#win").text("Wins: " + wins)
 }
 
 else if (counter > NumberToGuess) {
-	alert("You lose!");
 	losses++;
-	$("#losses").text("Losses: " + losses)
+	$(".lossimage").css("display", "block");
+	$("#losses").text("Losses: " + losses);
+	reset();
+	
 
 }
+
 
 
 

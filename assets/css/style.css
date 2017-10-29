@@ -1,5 +1,5 @@
 body {
-	background: url("https://cdn.suwalls.com/wallpapers/vector/lego-breaking-bad-29291-1920x1080.jpg");
+	background: url("https://cdn.suwalls.com/wallpapers/vector/lego-breaking-bad-29291-1920x1080.jpg");	
 	
 	
 }
@@ -9,6 +9,7 @@ h1 {
 	color: white;
 	text-align: center;
 	font-size: 114px;
+	text-shadow: 1px 1px grey;
 }
 
 p, h2, p1, p2, p3 {
@@ -26,8 +27,8 @@ p, h2, p1, p2, p3 {
 }
 
 .mineral-image {
-      width: 250px;
-      height: 250px;
+      width: 33%;
+      height: 33%;
     }
 
     #minerals {
@@ -42,6 +43,47 @@ p, h2, p1, p2, p3 {
 hr {
 
 	opacity: 0.2;
+}
+
+.winimage {
+	width: 480px;
+    height: 280px;
+    display: none;
+    left: 37%;
+    position: absolute;
+    text-align: center;
+    color: white;
+    
+}
+
+.lossimage {
+
+	width: 20%;
+    height: 500px;
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    left: 80%;
+
+}
+
+#hank {
+	width: 100%;
+    height: 99%;
+}
+
+@media screen and (max-width: 980px) {
+
+	#minerals {
+		width: 40%;
+	}
+
+	.mineral-image{
+		width: 33%;
+		height: 33%;
+	}
+
+	
 }
     
 
