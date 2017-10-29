@@ -3,7 +3,9 @@ $(document).ready(function () {
   //your code here
 
 
-
+counter = 0;
+wins=0;
+losses=0;
 
 var NumberToGuess = Math.floor((Math.random() * 100) + 1);
 
@@ -26,6 +28,35 @@ mineral.attr("mineral-points", imagepoints[i]);
 $("#minerals").append(mineral)
 
 }
+
+$(".mineral-image").on("click", function(){
+
+
+
+var MineralPoints = ($(this).attr("mineral-points"));
+mineralvalue = parseInt(MineralPoints);
+
+counter += mineralvalue;
+
+console.log(counter);
+
+if (counter == NumberToGuess) {
+	alert("You won!");
+	wins++;
+	$("#win").text("Wins: " + wins)
+}
+
+else if (counter > NumberToGuess) {
+	alert("You lose!");
+	losses++;
+	$("#loss").text("Losses: " + losses)
+}
+
+
+
+
+
+})
 
 
 });
