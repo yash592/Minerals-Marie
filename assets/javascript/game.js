@@ -8,7 +8,7 @@ wins=0;
 losses=0;
 
 function Guessnumber() {
-	NumberToGuess = Math.floor((Math.random() * 100) + 1);
+	NumberToGuess = Math.floor((Math.random() * 50) + 50);
 }
 
 console.log(Guessnumber());
@@ -18,9 +18,11 @@ $("#guessnumber").text("Number to be guessed: " + NumberToGuess);
 
 
 function reset () {
-	counter=0;
+	counter = 0;
 	Guessnumber();
 };
+
+reset();
 
 var imagepoints = [23, 20, 57];
 
@@ -55,14 +57,19 @@ $("#score").text("Score so far: " + counter)
 if (counter == NumberToGuess) {
 	wins++;
 	$(".winimage").css("display", "block");
-	$("#win").text("Wins: " + wins)
+	$("#win").text("Wins: " + wins);
+	reset();
+	
 }
+
 
 else if (counter > NumberToGuess) {
 	losses++;
 	$(".lossimage").css("display", "block");
 	$("#losses").text("Losses: " + losses);
 	reset();
+	
+	
 	
 
 }
@@ -73,7 +80,12 @@ else if (counter > NumberToGuess) {
 
 
 
+
+
+
 })
+
+
 
 
 });
