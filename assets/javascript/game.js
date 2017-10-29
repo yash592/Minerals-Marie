@@ -54,7 +54,7 @@ $("#score").text("Score so far: " + counter)
 
 if (counter == NumberToGuess) {
 	wins++;
-	$(".winimagea").css("display", "block");
+	$(".winimage").css("display", "block");
 	$("#win").text("Wins: " + wins)
 }
 
